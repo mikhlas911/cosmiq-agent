@@ -93,12 +93,16 @@ function Index() {
             </div>
 
             <div className="mt-16 overflow-hidden rounded-3xl border border-border panel-shadow glow-panel">
-              <img
-                src={heroImage}
-                alt="Cosmiq OS agents organising a company's documents into a connected database"
-                width={1600}
-                height={1008}
-                className="h-auto w-full"
+              <video
+                src={explainerVideo.url}
+                poster={explainerPoster.url}
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Cosmiq OS animated explainer video"
+                className="aspect-square h-auto w-full bg-background object-cover"
               />
             </div>
 
