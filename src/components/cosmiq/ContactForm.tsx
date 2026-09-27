@@ -91,7 +91,7 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field id="name" label="Name" error={errors.name}>
+        <Field id="name" label="Name" error={errors["name"]}>
           <Input
             id="name"
             value={form.name}
@@ -100,7 +100,7 @@ export function ContactForm() {
             placeholder="Your full name"
           />
         </Field>
-        <Field id="role" label="Role" error={errors.role}>
+        <Field id="role" label="Role" error={errors["role"]}>
           <Input
             id="role"
             value={form.role}
@@ -109,7 +109,7 @@ export function ContactForm() {
             placeholder="Founder, Operations Manager…"
           />
         </Field>
-        <Field id="business_domain" label="Business Domain" error={errors.business_domain}>
+        <Field id="business_domain" label="Business Domain" error={errors["business_domain"]}>
           <Input
             id="business_domain"
             value={form.business_domain}
@@ -118,7 +118,7 @@ export function ContactForm() {
             placeholder="Logistics, clinic, agency…"
           />
         </Field>
-        <Field id="email" label="Email ID" error={errors.email}>
+        <Field id="email" label="Email ID" error={errors["email"]}>
           <Input
             id="email"
             type="email"
@@ -128,7 +128,7 @@ export function ContactForm() {
             placeholder="you@company.com"
           />
         </Field>
-        <Field id="phone" label="Phone number" error={errors.phone}>
+        <Field id="phone" label="Phone number" error={errors["phone"]}>
           <Input
             id="phone"
             type="tel"
@@ -138,7 +138,7 @@ export function ContactForm() {
             placeholder="+91 98765 43210"
           />
         </Field>
-        <Field id="automations" label="Admin Automations" error={errors.automations}>
+        <Field id="automations" label="Admin Automations" error={errors["automations"]}>
           <Select value={form.automations} onValueChange={set("automations")}>
             <SelectTrigger id="automations">
               <SelectValue placeholder="Select what you need automated" />
@@ -154,7 +154,7 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <Field id="additional_requests" label="Additional Requests" error={errors.additional_requests}>
+      <Field id="additional_requests" label="Additional Requests" error={errors["additional_requests"]}>
         <Textarea
           id="additional_requests"
           value={form.additional_requests}
@@ -183,7 +183,7 @@ function Field({
 }: {
   id: string;
   label: string;
-  error?: string;
+  error?: string | undefined;
   children: React.ReactNode;
 }) {
   return (
