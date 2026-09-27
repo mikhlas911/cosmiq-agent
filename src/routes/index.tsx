@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Orbit } from "lucide-react";
-import heroImage from "@/assets/hero-cosmiq.jpg";
+import explainerVideo from "@/assets/cosmiq-explainer.mp4.asset.json";
+import explainerPoster from "@/assets/cosmiq-explainer-poster.jpg.asset.json";
 import { ContactForm } from "@/components/cosmiq/ContactForm";
 import {
   AgentsSection,
